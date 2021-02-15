@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <title>Beep : Ecommerce Site</title>
+
+    <!-- site icon -->
+    <link rel="icon" type="image/png"  href="images/beep-1@2x.png">
+
+    <!--css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+</head>
+<body >
+
+    
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="header-img"  src="images/beep-1@2x.png" alt="beep logo" >
+                </div>
+                <div class="col-md-6 d-flex flex-row-reverse">
+                    
+                    <ul class="header-list">
+                        <li><a class="header-elements" href="#"><img src="images/Icon material-notifications-none@2x.png" alt="notification-icon"></a></li>
+                        <li><a class="header-elements" href="#"><img src="images/profile_close_2@2x.png" alt="profile-img">My Profile</a></li>
+                        <li><a class="header-elements" href="#"><img src="images/bag_3@2x.png" alt="bag-image">0 Items</a></li>
+                        <li><a class="header-elements" href="#"><img src="images/search-icon@2x.png" alt="search-icon"></a></li>
+    
+                    </ul>
+                   
+                </div>
+            </div>
+        </div>     
+    </header>
+
+    
+
+    <section>
+        <div class="container nav-path">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Accesories</li>                
+                </ol>
+              </nav>
+        </div>
+    </section>
+
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    
+                    <div class="category-menu ">
+                        <div class="cm-heading">
+                            ALL CATEGORIES
+                        </div>
+            
+                        <div class="cm-items" >
+                            <a href="#" style="color: #33a0ff;">Accesories</a>
+                            <a href="#">Cables & Docks</a>
+                            <a href="#">Cases & Films</a>
+                            <a href="#">Charging Devices</a>
+                            <a href="#">Connected Home</a>
+                            <a href="#">Headphones</a>
+                        </div>
+                    </div>
+
+                    <div class="category-menu ">
+                        <div class="cm-heading">PRICES</div>
+            
+                            <div class="min-max-validation">
+                                <div class="container">
+                                    <div class="row ">
+
+                                        <div class="col-md-5 ">
+
+                                            <p class="price-input">Min </p>
+                                            <input class="price-input" type="text" id="min-price" placeholder="$499" onfocusout="pricevalidation()">
+
+                                        </div>
+
+                                        <div class="col-md-1 col-md-offset-1 dash" >
+                                           <p class="dash"></p>                                           
+                                        </div>
+
+                                        <div class="col-md-5 ">
+                                            <p class="price-input ">Max </p>
+                                            <input class="price-input" type="text" id="max-price" placeholder="$499" onfocusout="pricevalidation()">       
+                                        </div>
+
+                                    </div>                                    
+                                </div>
+                                <div class="row"><p id="price-warning" ></p></div>
+                            </div>  
+
+                    </div>
+
+                    <div class="category-menu ">
+                        <div class="cm-heading">
+                            COLOR
+                        </div>
+            
+                        <div style="text-align:left; padding-left: 20px; padding-top: 15px;" class="color">
+              
+                            <a href="#"><span class="dot" style="background-color: blue"></span></a>
+                            <a href="#"><span class="dot" style="background-color: red"></span></a>
+                            <a href="#"><span class="dot" style="background-color: black"></span></a>
+                            <a href="#"><span class="dot" style="background-color: yellow"></span></a>
+                            <a href="#"><span class="dot" style="background-color: pink"></span></a>
+                            <a href="#"><span class="dot" style="background-color: bisque;""></span></a>
+                        
+                        </div>
+                    </div>
+
+
+                    <div class="category-menu ">
+                        <div class="cm-heading">BRAND</div>
+            
+                        <div class="cm-items">
+                            <a href="#"><p class="align-left" style="color: #33a0ff;">Apple</p>
+                            <p class="align-right" style="color: #33a0ff;">99</p></a>
+                            <div style="clear: both;"></div>
+
+                            <a href="#"><p class="align-left">Beats</p>
+                            <p class="align-right">99</p></a>
+                            <div style="clear: both;"></div>
+
+                            <a href="#"><p class="align-left">Cases & Films</p>
+                            <p class="align-right">99</p></a>
+                            <div style="clear: both;"></div>
+
+                            <a href="#"><p class="align-left">Samsung</p>
+                            <p class="align-right">99</p></a>
+                            <div style="clear: both;"></div>
+
+                            <a href="#"><p class="align-left">Siemens</p>
+                            <p class="align-right">99</p></a>
+                            <div style="clear: both;"></div>
+
+                        </div>
+                        
+                    </div>
+
+
+                    <div class="category-menu ">
+                        <div class="cm-more text-center">
+                            <a href="#">MORE</a> 
+                        </div>
+                    </div>
+                
+                </div>
+
+               
+                <div class="col-md-8 text-center">  
+          
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+
+                            
+                            <ul class="carousel-indicators">
+                              <li data-target="#demo" data-slide-to="0" class="active"></li>
+                              <li data-target="#demo" data-slide-to="1"></li>
+                              <li data-target="#demo" data-slide-to="2"></li>
+                            </ul>
+                        
+                            
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <div class="carousal-box " >
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="text-left">
+                                                    <div class="carousal-text">
+                                                        <div class="carousal-heading">iPhone 8</div>
+                                                        <div class="carousal-content">Performance and design. Taken right to edge</div>
+                                                        <div class="carousal-link"><a href="#" class="font-weight-bold">SHOP NOW</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-md-6">
+                                                <div class="text-right">
+                                                    <img class="rounded float-right" src="images/pic@2x.png"  alt="pic">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                      
+                                </div>
+        
+                              </div>
+                              <div class="carousel-item">
+                                <div class="carousal-box" style="background-color: orange;">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="text-left">
+                                                    <div class="carousal-text">
+                                                        <div class="carousal-heading">iPhone 8</div>
+                                                        <div class="carousal-content">Performance and design. Taken right to edge</div>
+                                                        <div class="carousal-link"><a href="#" class="font-weight-bold">SHOP NOW</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-md-6">
+                                                <div class="text-right">
+                                                    <img class="rounded float-right" src="images/pic@2x.png"  alt="pic">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                      
+                                </div>
+        
+                              </div>
+                              <div class="carousel-item">
+                                <div class="carousal-box" style="background-color: rgb(248, 53, 95);">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="text-left">
+                                                    <div class="carousal-text">
+                                                        <div class="carousal-heading">iPhone 8</div>
+                                                        <div class="carousal-content">Performance and design. Taken right to edge</div>
+                                                        <div class="carousal-link"><a href="#" class="font-weight-bold">SHOP NOW</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-md-6">
+                                                <div class="text-right">
+                                                    <img class="rounded float-right" src="images/pic@2x.png"  alt="pic">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                      
+                                </div>
+        
+                              </div>
+                            </div>
+                        
+                           
+                          </div>
+
+
+
+
+                    <div class="item-showcase">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10 text-left">
+
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="showcase-elemet">
+                                                    <p class="item-show-count">13 Items</p>                     
+                                                </div>  
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="showcase-elemet">
+                                                    Sort By
+                                                    <div class="dropdown show " style="display: inline-block;" >
+                                                        <a class="btn dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Name
+                                                        </a>
+                                                    
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                        <a class="dropdown-item" href="#">Name</a>
+                                                        <a class="dropdown-item" href="#">Brand action</a>
+                                                        <a class="dropdown-item" href="#">Price-low to high</a>
+                                                        <a class="dropdown-item" href="#">Price-high to low </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+
+                                                Show
+
+                                                <div class="dropdown show" style="display: inline-block;" >
+                                                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    12
+                                                    </a>
+                                                
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                    <a class="dropdown-item" href="#">3</a>
+                                                    <a class="dropdown-item" href="#">6</a>
+                                                    <a class="dropdown-item" href="#">9</a>
+                                                    <a class="dropdown-item" href="#">12</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                              
+
+                                    
+                        
+
+                                    
+
+                                </div>
+                               
+                                <div class="col-md-2">
+                                    
+                                    <div id="btnContainer">
+                                        <button class="btn active" style="color:#2e90e5; ;"><i class="fa fa-th-large" ></i></button>
+                                        <button class="btn" style="color: #c1c8ce;"><i class="fa fa-bars" ></i></button> 
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                            
+                        
+                    </div>
+
+                    <div class="image-thumbnail">                      
+                        
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="item-image ">
+                                        <img src="images/Rectangle 5.png" alt="accesory-image">
+                                        <p class="caption">Beat Solo2 On Ear Headphones</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div></div>
+                                       
+                                        <span class="item-price">$499</span>
+                                        <span class="before-price"><del>$599</del></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="item-image">
+                                        <img src="images/Rectangle 5.png" alt="accesory-image">
+                                        <p class="caption">Beat Solo2 On Ear Headphones</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div></div>
+                                       
+                                        <span class="item-price">$499</span>
+                                        <span class="before-price"><del>$599</del></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="item-image">
+                                        <img src="images/Rectangle 5.png" alt="accesory-image">
+                                        <p class="caption">Beat Solo2 On Ear Headphones</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div></div>
+                                       
+                                        <span class="item-price">$499</span>
+                                        <span class="before-price"><del>$599</del></span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="item-image">
+                                        <img src="images/Rectangle 5.png" alt="accesory-image">
+                                        <p class="caption">Beat Solo2 On Ear Headphones</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div></div>
+                                       
+                                        <span class="item-price">$499</span>
+                                        <span class="before-price"><del>$599</del></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="item-image">
+                                        <img src="images/Rectangle 5.png" alt="accesory-image">
+                                        <p class="caption">Beat Solo2 On Ear Headphones</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div></div>
+                                       
+                                        <span class="item-price">$499</span>
+                                        <span class="before-price"><del>$599</del></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="item-image">
+                                        <img src="images/Rectangle 5.png" alt="accesory-image">
+                                        <p class="caption">Beat Solo2 On Ear Headphones</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div></div>
+                                       
+                                        <span class="item-price">$499</span>
+                                        <span class="before-price"><del>$599</del></span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="item-image">
+                                        <img src="images/Rectangle 5.png" alt="accesory-image">
+                                        <p class="caption">Beat Solo2 On Ear Headphones</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div></div>
+                                       
+                                        <span class="item-price">$499</span>
+                                        <span class="before-price"><del>$599</del></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="item-image">
+                                        <img src="images/Rectangle 5.png" alt="accesory-image">
+                                        <p class="caption">Beat Solo2 On Ear Headphones</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div></div>
+                                       
+                                        <span class="item-price">$499</span>
+                                        <span class="before-price"><del>$599</del></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="item-image">
+                                        <img src="images/Rectangle 5.png" alt="accesory-image">
+                                        <p class="caption">Beat Solo2 On Ear Headphones</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div></div>
+                                       
+                                        <span class="item-price">$499</span>
+                                        <span class="before-price"><del>$599</del></span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="item-image">
+                                        <img src="images/Rectangle 5.png" alt="accesory-image">
+                                        <p class="caption">Beat Solo2 On Ear Headphones</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div></div>
+                                       
+                                        <span class="item-price">$499</span>
+                                        <span class="before-price"><del>$599</del></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="item-image">
+                                        <img src="images/Rectangle 5.png" alt="accesory-image">
+                                        <p class="caption">Beat Solo2 On Ear Headphones</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div></div>
+                                       
+                                        <span class="item-price">$499</span>
+                                        <span class="before-price"><del>$599</del></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="item-image">
+                                        <img src="images/Rectangle 5.png" alt="accesory-image">
+                                        <p class="caption">Beat Solo2 On Ear Headphones</p>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div></div>
+                                       
+                                        <span class="item-price">$499</span>
+                                        <span class="before-price"><del>$599</del></span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>                     
+                    </div>
+
+
+                    <div class="pagination-div my-auto" >
+                        <div id="pagination" onclick="page()">
+                            <button class="pbtn">1</button>
+                            <button class="pbtn active">2</button>
+                            <button class="pbtn">3</button>
+                            <button class="pbtn">4</button>
+                            <button class="pbtn">5</button>
+                          </div>                          
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+   
+    <footer>
+        <div class="footer-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 ">
+                                    <img class="img-responsive" src="images/beep@2x.png" alt="beep-logo" style="height: 70px; ">
+                                    <p>Lorem ipsum is simply dummy text of priting and typesetting industry. Lorem ipsum has been the industry standard dummy text ever since 1500s, when an unknown printer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="container">
+                            <div class="row foot-heading" >
+                                <h6>Follow Us</h6>
+                            </div>
+                            <div class="row">
+                                <p style="padding-top: 20px;">Since the 1500s when a tyoewriter took a galley and scrambled</p>
+                            </div>
+                            <div class="row">
+
+                                <a href="#" class="footer-social">
+                                    <img src="images/facebook.png" alt="facebook">
+                                </a>  
+                                <a href="#" class="footer-social" >
+                                    <img src="images/twitter.png" alt="facebook">
+                                </a>   
+                                
+                            </div>
+                        </div>                       
+
+                    </div>
+                    
+                    <div class="col-md-4">
+
+                        <div class="container">
+                            <div class="row foot-heading" >
+                                <h6>Contact Us</h6>
+                            </div>
+                            <div class="row">
+                                <p>My Company, 4578 Mamora Road, Glasgow<br>
+                                    D04 89GR<br>Call us now : 0123-456-789<br>
+                                    Email : support@whatever.com</p>  
+                            </div>                            
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-base">
+            <div class="container text-center">
+                <div class="col-md-6 text-left">
+                    <p>&copy; 2021 Ecommerce Site by www.beep.com</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <div class="payment-methods">
+                        <img src="images/Western-union@2x.png" class="img-responsive" alt="Western-union">
+                        <img src="images/Group 19@2x.png" class="img-responsive" alt="master-card">
+                        <img src="images/Paypal@2x.png" alt="Paypal" class="img-responsive">
+                        <img src="images/Shape 328@2x.png" alt="visa" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

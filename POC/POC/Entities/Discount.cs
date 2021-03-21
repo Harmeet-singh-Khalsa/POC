@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace POC.Entities
 {
     public class Discount
     {
-        
+        [Key]
         public int discount_id { get; set; }
         public int discount_amount { get; set; }
         public bool isdeleted { get; set; }   

@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace POC.Entities
 {
     public class Products
     {
-        
+        [Key]
         public int product_id { get; set; }
         public string product_name { get; set; }
         public string product_description { get; set; }      

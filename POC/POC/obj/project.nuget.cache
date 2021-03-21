@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "BsaAfS9eD7rW1T0G4vKoLWaRjXgilFWbiPDhbTVetEd/FcYRE8hX5Wdc+3jrXF/lk+vCBj5I0vi5+JNeRjFUiw==",
+  "dgSpecHash": "InxNJKrIuYc2MInaMHezg3eRJc1RBe0t7ZTWJGe6y1aJkoMWfaLTwaYTYU16WsYkYKtt6Q5aB5qbOJ6/TJt7Gw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anjali\\source\\repos\\POC\\POC\\POC.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/sakshi/Desktop/POC/POC/POC/POC.csproj",
+  "expectedPackageFiles": [
+    "/home/sakshi/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "/home/sakshi/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "/home/sakshi/.nuget/packages/microsoft.netcore.app.host.linux-x64/3.1.13/microsoft.netcore.app.host.linux-x64.3.1.13.nupkg.sha512"
+  ],
   "logs": []
 }

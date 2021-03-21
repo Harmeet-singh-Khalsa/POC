@@ -1,0 +1,57 @@
+Product
+Search 
+
+Table
+	product
+	audit log
+	user info (userid,)
+	cart	(cartid, billing info,shipping addr, items,userid,status:complete/incomplete)  --> on checkout convert same to order
+	category
+	itemscollection (itemid, inventory, product)
+	order(ordercreated,shipcompleted,orderprocessed)
+	
+Concepts 
+	- category parent id
+	- soft delete
+	- don't have only one table (read slow) 
+	- INDEXING
+	
+CATEGORY TABLE 
+	
+	- Primary Key --> Cluster Index (storage in order on a physical drive)
+	-  if query has serch on name, have index on it
+	- category tbale : ID (int/guid), type, name, short-description, long-description, created-date, updated-date, who Updated, image(created on , by , updated by, parent id)
+
+PRODUCT TABLE
+
+	- category Id(F.K), desc (long and short), 
+	
+	
+USER TABLE -- noramliztion to be applied
+	
+	- fname , lname,mname, email , pwd(hash), pwd(salt), created on, updated date, isdelete (soft/hard), phno.
+	
+	
+user addr
+
+	- uid, country, state, city, postal code, landmark, isdeleted, create, update, who update, type= home/office , addrid
+	
+CART TABLE	
+
+image table (imgid, who,when-created string of image/	 system path)	
+	
+	
+	
+	
+	
+Meeting Points : 	
+ 1. category tbale : ID (int/guid), type, name, short-description, long-description, created-date, updated-date, who Updated 
+ 2. single table with parent id -- complex for search operations
+ 3. isdeleted field default 0 dtype bool [if you dont want to show some data mark it 1 -- soft delete]
+ 4. inventory -- store stock details
+ 5. new version and dont want old version to show
+ 6. sale going on
+ 7. cart and user 1 to 1 mapping
+ 
+	
+	

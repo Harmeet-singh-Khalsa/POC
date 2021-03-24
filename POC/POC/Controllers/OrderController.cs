@@ -1,16 +1,46 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using POC.DTOs;
+using POC.Entities;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace POC.Controllers
 {
-    public class OrderController : Controller
+    [Route("api/order")]
+    [ApiController]
+
+    public class OrderController : ControllerBase
     {
-        public IActionResult Index()
+        private readonly ILogger<OrderController> logger;
+        private readonly ApplicationDbContext context;
+        private readonly IMapper mapper;
+
+        public OrderController(ILogger<OrderController> logger,
+            ApplicationDbContext context,
+            IMapper mapper)
         {
-            return View();
+            this.logger = logger;
+            this.context = context;
+            this.mapper = mapper;
+        }
+
+
+        [HttpGet("{Id:int}", Name = "getitem")]
+        public async Task<ActionResult<OrdersDTO>> Get(int Id)
+        {
+            var user = await context.Orders.FirstOrDefaultAsync(x => x.order_id == Id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var orderitemDTO = mapper.Map<OrdersDTO>(user);
+
+            return orderitemDTO;
         }
     }
 }

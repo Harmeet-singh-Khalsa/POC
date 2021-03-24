@@ -29,7 +29,7 @@ namespace POC.Controllers
             this.mapper = mapper;
         }
 
-        [HttpGet] // api/users
+        [HttpGet] 
         public async Task<ActionResult<List<ProductDetailsDTO>>> Get()
         {
             var product = await context.ProductDetails.AsNoTracking().ToListAsync();
@@ -51,8 +51,8 @@ namespace POC.Controllers
 
             return productDTOS;
         }
-
-        [HttpGet("{color:string}", Name = "getDetails")] // api/users/getDetails
+        
+        [HttpGet("{color}", Name = "getColor")] // api/users/getDetails
         public async Task<ActionResult<ProductDetailsDTO>> Get(string color)
         {
             var product = await context.ProductDetails.FirstOrDefaultAsync(x => x.color == color);
@@ -67,20 +67,8 @@ namespace POC.Controllers
             return productDTOS;
         }
 
-        [HttpGet("{brand:string}", Name = "getDetails")] // api/users/getDetails
-        public async Task<ActionResult<ProductDetailsDTO>> GetBrand(string brand)
-        {
-            var product = await context.ProductDetails.FirstOrDefaultAsync(x => x.color == brand);
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            var productDTOS = mapper.Map<ProductDetailsDTO>(product);
-
-            return productDTOS;
-        }
+        
+        
     }
 
 }

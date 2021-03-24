@@ -27,11 +27,26 @@ namespace POC.Controllers
             this.mapper = mapper;
         }
 
-        [HttpGet] // api/users
+        [HttpGet]
         public async Task<ActionResult<List<ProductsDTO>>> Get()
         {
-            var users = await context.Products.AsNoTracking().ToListAsync();
-            var ProductsDTOs = mapper.Map<List<ProductsDTO>>(users);
+            var product = await context.Products.AsNoTracking().ToListAsync();
+            var ProductsDTOs = mapper.Map<List<ProductsDTO>>(product);
+            return ProductsDTOs;
+        }
+
+        [HttpGet("{Id:int}", Name = "getProducts")] // api/users/getUsers
+        public async Task<ActionResult<ProductsDTO>> Get(int Id)
+        {
+            var product = await context.Products.FirstOrDefaultAsync(x => x.product_id == Id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            var ProductsDTOs = mapper.Map<ProductsDTO>(product);
+
             return ProductsDTOs;
         }
     }

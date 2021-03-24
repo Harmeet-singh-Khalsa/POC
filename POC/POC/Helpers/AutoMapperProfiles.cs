@@ -14,30 +14,25 @@ namespace POC.Helpers
         {
             CreateMap<Users, UsersDTO>().ReverseMap();
 
-            /*
-            CreateMap<GenreCreationDTO, Genre>();
+            CreateMap<UsersCreationDTO, Users>();
 
-            CreateMap<Person, PersonDTO>().ReverseMap();
+            CreateMap<ProductDetails, ProductDetailsDTO>().ReverseMap();
 
-            CreateMap<PersonCreationDTO, Person>()
-                .ForMember(x => x.Picture, options => options.Ignore());
+            CreateMap<Products, ProductsDTO>().ReverseMap();
 
-            CreateMap<Person, PersonPatchDTO>().ReverseMap();
+            CreateMap<Orders, OrdersDTO>().ReverseMap();
 
-            CreateMap<Movie, MovieDTO>().ReverseMap();
+            CreateMap<OrderItem, OrderItemDTO>().ReverseMap();
 
-            CreateMap<MovieCreationDTO, Movie>()
-                .ForMember(x => x.Poster, options => options.Ignore())
-                .ForMember(x => x.MoviesGenres, options => options.MapFrom(MapMoviesGenres))
-                .ForMember(x => x.MoviesActors, options => options.MapFrom(MapMoviesActors));
+            CreateMap<Discount, DiscountDTO>().ReverseMap();
 
-            CreateMap<Movie, MovieDetailsDTO>()
-               .ForMember(x => x.Genres, options => options.MapFrom(MapMoviesGenres))
-               .ForMember(x => x.Actors, options => options.MapFrom(MapMoviesActors));
+            CreateMap<Categories, CategoriesDTO>().ReverseMap();
 
-            CreateMap<Movie, MoviePatchDTO>().ReverseMap();
+            CreateMap<Cart, CartDTO>().ReverseMap();
 
-            */
+            CreateMap<Address, AddressDTO>().ReverseMap();
+
+
         }
 
        

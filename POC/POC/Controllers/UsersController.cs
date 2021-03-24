@@ -13,7 +13,7 @@ namespace POC.Controllers
     [Route("api/users")]
     [ApiController]
 
-    public class UsersController 
+    public class UsersController : ControllerBase
     {
         private readonly ILogger<UsersController> logger;
         private readonly ApplicationDbContext context;
@@ -39,37 +39,38 @@ namespace POC.Controllers
         [HttpGet("{Id:int}", Name = "getUsers")] // api/users/getUsers
         public async Task<ActionResult<UsersDTO>> Get(int Id)
         {
-            var genre = await context.Users.FirstOrDefaultAsync(x => x.user_id == Id);
+            var user = await context.Users.FirstOrDefaultAsync(x => x.user_id == Id);
 
-            if (genre == null)
+            if (user == null)
             {
-               // return NotFound();
+                return NotFound();
             }
 
-            var genreDTO = mapper.Map<UsersDTO>(genre);
+            var userDTO = mapper.Map<UsersDTO>(user);
 
-            return genreDTO;
+            return userDTO;
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] UsersCreationDTO genreCreation)
+        public async Task<ActionResult> Post([FromForm] UsersCreationDTO personCreationDTO)
         {
-            var genre = mapper.Map<Users>(genreCreation);
-            context.Add(genre);
+            var person = mapper.Map<Users>(personCreationDTO);
+                        
+            context.Add(person);
             await context.SaveChangesAsync();
-            var genreDTO = mapper.Map<UsersDTO>(genre);
-
-            return new CreatedAtRouteResult("getGenre", new { genreDTO.user_id }, genreDTO);
+            var personDTO = mapper.Map<UsersDTO>(person);
+            return new CreatedAtRouteResult("getPerson", new { id = person.user_id }, personDTO);
         }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, [FromBody] UsersCreationDTO genreCreation)
+
+        [HttpPut("{id}")]       //update
+        public async Task<ActionResult> Put(int id, [FromBody] UsersCreationDTO userCreation)
         {
-            var genre = mapper.Map<Users>(genreCreation);
-            genre.user_id = id;
-            context.Entry(genre).State = EntityState.Modified;
+            var user = mapper.Map<Users>(userCreation);
+            user.user_id = id;
+            context.Entry(user).State = EntityState.Modified;
             await context.SaveChangesAsync();
-            return NoContent();
+           return NoContent();
         }
 
         [HttpDelete("{id}")]
@@ -78,7 +79,7 @@ namespace POC.Controllers
             var exists = await context.Users.AnyAsync(x => x.user_id == id);
             if (!exists)
             {
-                //return NotFound();
+                return NotFound();
             }
 
             context.Remove(new Users() { user_id = id });

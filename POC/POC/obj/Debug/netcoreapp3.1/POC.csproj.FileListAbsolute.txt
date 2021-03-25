@@ -83,3 +83,8 @@ C:\Users\Anjali\Source\Repos\Sakshi-7699\POC\POC\POC\obj\Debug\netcoreapp3.1\POC
 C:\Users\Anjali\Source\Repos\Sakshi-7699\POC\POC\POC\obj\Debug\netcoreapp3.1\POC.genruntimeconfig.cache
 C:\Users\Anjali\Source\Repos\Sakshi-7699\POC\POC\POC\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\Anjali\Source\Repos\Sakshi-7699\POC\POC\POC\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Anjali\source\repos\Sakshi-7699\POC\POC\POC\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Anjali\source\repos\Sakshi-7699\POC\POC\POC\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Anjali\source\repos\Sakshi-7699\POC\POC\POC\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Anjali\source\repos\Sakshi-7699\POC\POC\POC\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Anjali\source\repos\Sakshi-7699\POC\POC\POC\obj\Debug\netcoreapp3.1\POC.MvcApplicationPartsAssemblyInfo.cs

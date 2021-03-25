@@ -12,6 +12,6 @@ namespace POC.DTOs
         public string product_description { get; set; }
         public string product_image { get; set; }
         public int product_amount { get; set; }
-        public bool category_id { get; set; }
+        public int category_id { get; set; }
     }
 }

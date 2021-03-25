@@ -17,7 +17,7 @@ namespace POC.Entities
         
         public int product_amount { get; set; }
 
-        public bool category_id { get; set; }
+        public int category_id { get; set; }
 
        
     }

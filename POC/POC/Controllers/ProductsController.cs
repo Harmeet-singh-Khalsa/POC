@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using POC.DTOs;
 using Microsoft.EntityFrameworkCore;
-
+using POC.Helpers;
 namespace POC.Controllers
 {
     [Route("api/products")]
@@ -28,11 +28,12 @@ namespace POC.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ProductsDTO>>> Get()
+        public async Task<ActionResult<List<ProductsDTO>>> Get([FromQuery] PaginationDTO pagination)
         {
-            var product = await context.Products.AsNoTracking().ToListAsync();
-            var ProductsDTOs = mapper.Map<List<ProductsDTO>>(product);
-            return ProductsDTOs;
+            var queryable = context.Products.AsQueryable();
+            await HttpContext.InsertPaginationParametersInResponse(queryable, pagination.RecordsPerPage);
+            var product = await queryable.Paginate(pagination).ToListAsync();
+            return mapper.Map<List<ProductsDTO>>(product);
         }
 
         [HttpGet("{Id:int}", Name = "getProducts")] // api/users/getUsers

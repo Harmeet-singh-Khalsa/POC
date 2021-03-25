@@ -28,7 +28,7 @@ namespace POC.Controllers
         }
 
 
-        [HttpGet("{Id:int}", Name = "getitem")]
+        [HttpGet("{Id:int}", Name = "getorder")]
         public async Task<ActionResult<OrdersDTO>> Get(int Id)
         {
             var user = await context.Orders.FirstOrDefaultAsync(x => x.order_id == Id);

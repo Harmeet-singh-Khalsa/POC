@@ -27,21 +27,13 @@ namespace POC.Controllers
         }
 
 
-        [HttpGet("{Id:int}", Name = "getCategory")]
-            public async Task<ActionResult<ProductsDTO>> Get(int Id)
-            {
-                var products
-                = await context.Products.FirstOrDefaultAsync(x => x.category_id == Id);
+        [HttpGet] // api/categories
+        public async Task<ActionResult<List<CategoriesDTO>>> Get()
+        {
+            var users = await context.Categories.AsNoTracking().ToListAsync();
+            var UserDTOS = mapper.Map<List<CategoriesDTO>>(users);
+            return UserDTOS;
+        }
 
-                if (products == null)
-                {
-                    return NotFound();
-                }
-
-                var productDTO = mapper.Map<ProductsDTO>(products);
-
-                return productDTO;
-            }
-       
     }
 }
